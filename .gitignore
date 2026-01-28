@@ -1,0 +1,172 @@
+# -------------------------------------------------
+# Python tarafından otomatik üretilen dosyalar
+# (Çalışma sırasında oluşur, commit edilmez)
+# -------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# -------------------------------------------------
+# Derlenmiş / native Python eklentileri
+# -------------------------------------------------
+*.so
+
+
+# -------------------------------------------------
+# Build, paketleme ve dağıtım çıktıları
+# (pip / setuptools / wheel / pypi)
+# -------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+*.egg
+.installed.cfg
+MANIFEST
+
+
+# -------------------------------------------------
+# PyInstaller çıktıları
+# (exe / standalone build dosyaları)
+# -------------------------------------------------
+*.spec
+*.manifest
+
+
+# -------------------------------------------------
+# Test, coverage ve kalite araçları
+# -------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+*.cover
+coverage.xml
+nosetests.xml
+.hypothesis/
+
+
+# -------------------------------------------------
+# Log dosyaları
+# -------------------------------------------------
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+logs/
+
+
+# -------------------------------------------------
+# Çeviri / lokalizasyon dosyaları
+# -------------------------------------------------
+*.mo
+*.pot
+
+
+# -------------------------------------------------
+# Framework / tool spesifik dosyalar
+# -------------------------------------------------
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+
+# Flask
+instance/
+.webassets-cache/
+
+# Scrapy
+.scrapy/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+
+# -------------------------------------------------
+# Dokümantasyon çıktıları
+# -------------------------------------------------
+docs/_build/
+site/
+
+
+# -------------------------------------------------
+# Jupyter / IPython
+# -------------------------------------------------
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+
+# -------------------------------------------------
+# Sanal ortamlar (virtual environments)
+# -------------------------------------------------
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+# -------------------------------------------------
+# Paket yöneticileri / bağımlılık cache’leri
+# -------------------------------------------------
+
+# PDM
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582 (__pypackages__)
+__pypackages__/
+
+
+# -------------------------------------------------
+# Static type checker / linter cache’leri
+# -------------------------------------------------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+
+# -------------------------------------------------
+# IDE / Editor ayarları
+# -------------------------------------------------
+
+# PyCharm / JetBrains
+.idea/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# Cursor (AI editor)
+.cursorignore
+.cursorindexingignore
+
+
+# -------------------------------------------------
+# Python config / kullanıcı ayarları
+# -------------------------------------------------
+.pypirc
+.python-version
+
+
+# -------------------------------------------------
+# Diğer
+# -------------------------------------------------
+*.sage.py
+cython_debug/
