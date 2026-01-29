@@ -1,5 +1,5 @@
-.PHONY: help install install-dev format lint typecheck test test-all run run-docker up down clean \
-        health echo echo-invalid root
+.PHONY: help install install-dev format lint typecheck test test-all run up down clean \
+        health echo echo-invalid root rename
 
 # -------------------------------------------------
 # Variables
@@ -7,6 +7,8 @@
 APP_NAME = pystartertemplate
 HOST = http://localhost:8000
 API_V1 = $(HOST)/api/v1
+
+OLD_NAME ?= pystartertemplate
 
 # -------------------------------------------------
 # Help
@@ -30,6 +32,9 @@ help:
 	@echo "  make typecheck      → Mypy"
 	@echo "  make test           → Pytest"
 	@echo "  make test-all       → Format + Lint + Typecheck + Test"
+	@echo ""
+	@echo "🔁 Proje Yönetimi"
+	@echo "  make rename NEW_NAME=myapi  → Proje ve paket adını değiştir"
 	@echo ""
 	@echo "🌐 API Endpoint Testleri"
 	@echo "  make root           → GET /"
@@ -79,6 +84,14 @@ test:
 	pytest
 
 test-all: format lint typecheck test
+
+# -------------------------------------------------
+# Project Rename (SAFE / CROSS-PLATFORM)
+# Usage:
+#   make rename NEW_NAME=myawesomeapi
+# -------------------------------------------------
+rename:
+	@python tools/rename_project.py --old "$(OLD_NAME)" --new "$(NEW_NAME)"
 
 # -------------------------------------------------
 # API Endpoint Helpers (CURL shortcuts)
